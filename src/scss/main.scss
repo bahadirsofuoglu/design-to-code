@@ -5,3 +5,68 @@ body {
   background: #303236;
   font-family: Muli;
 }
+
+input {
+  height: 50px;
+  width: 100%;
+  background: #303236;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #fff;
+  &:focus {
+    outline: 0;
+  }
+  &::placeholder {
+    color: rgba(#fff, 0.5);
+  }
+}
+
+.component--container {
+  background: #3d3f43;
+  border-radius: 5px;
+  padding: 40px 45px;
+  form {
+    margin-bottom: 30px;
+    position: relative;
+    .search-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 53px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    input {
+      padding-left: 53px;
+    }
+  }
+  h6 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  ul {
+    margin-top: 13px;
+    li {
+      a {
+        display: block;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        padding: 7px 0;
+        &:hover {
+          color: #2ccdea;
+          font-weight: bold;
+        }
+      }
+      &.active a {
+        color: #2ccdea;
+        font-weight: bold;
+      }
+    }
+  }
+}
