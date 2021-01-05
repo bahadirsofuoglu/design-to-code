@@ -1,34 +1,28 @@
 // reset
 @import "reset";
 @import "https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 body {
   background: #303236;
   font-family: Muli;
 }
 
-input {
-  height: 50px;
-  width: 100%;
-  background: #303236;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
-  color: #fff;
-  &:focus {
-    outline: 0;
-  }
-  &::placeholder {
-    color: rgba(#fff, 0.5);
-  }
-}
-
-.component--container {
+.component--search {
   background: #3d3f43;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 40px 45px;
+  box-shadow: 0 15px 25px -20px #202125;
+
   form {
-    margin-bottom: 30px;
     position: relative;
+    margin-bottom: 30px;
+
     .search-icon {
       position: absolute;
       top: 0;
@@ -39,18 +33,37 @@ input {
       align-items: center;
       justify-content: center;
     }
+
     input {
+      height: 50px;
+      width: 100%;
+      background: #303236;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #fff;
       padding-left: 53px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &::placeholder {
+        color: rgba(#fff, 0.5);
+      }
     }
   }
+
   h6 {
     font-size: 12px;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
   }
+
   ul {
     margin-top: 13px;
+
     li {
       a {
         display: block;
@@ -58,11 +71,13 @@ input {
         font-size: 16px;
         color: #fff;
         padding: 7px 0;
+
         &:hover {
           color: #2ccdea;
           font-weight: bold;
         }
       }
+
       &.active a {
         color: #2ccdea;
         font-weight: bold;
@@ -72,4 +87,71 @@ input {
 }
 
 .component--filter-search {
+  background: #3d3f43;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px -20px #202125;
+
+  form {
+    height: 68px;
+    padding: 14px;
+    display: flex;
+
+    .input {
+      display: flex;
+      align-items: center;
+      flex: 1;
+
+      .search-icon {
+        width: 50px;
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        height: 40px;
+        font-size: 16px;
+        color: #fff;
+
+        &:focus {
+          outline: 0;
+        }
+
+        &::placeholder {
+          color: rgba(#fff, 0.5);
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      margin-left: 15px;
+
+      li {
+        label {
+          .text {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            color: #fff;
+            padding: 0 25px;
+            cursor: pointer;
+            border-radius: 40px;
+            transition: 400ms background-color, 400ms color;
+          }
+
+          input {
+            display: none;
+
+            &:checked + .text {
+              background-color: #303236;
+              color: #2ccdea;
+            }
+          }
+        }
+      }
+    }
+  }
 }
