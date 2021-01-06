@@ -72,3 +72,54 @@
     color: #101439;
   }
 }
+
+.description-card {
+  position: relative;
+  width: 505px;
+  height: 510px;
+  background: #ffffff;
+  box-shadow: 0px 15px 30px -20px #d4dcf3;
+  border-radius: 10px;
+  h6 {
+    position: absolute;
+    top: 84px;
+    left: 85px;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 36px;
+    /* identical to box height, or 55% */
+
+    color: #101439;
+  }
+  p {
+    position: absolute;
+    top: 125px;
+    left: 97px;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+    /* or 164% */
+
+    color: #101439;
+  }
+  span {
+    position: absolute;
+    left: 85px;
+    bottom: 65px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    /* identical to box height, or 200% */
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #101439;
+  }
+}
