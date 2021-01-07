@@ -1,13 +1,14 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')
-const minifyCSS = require('gulp-csso')
+const minifyCSS = require('gulp-clean-css')
 const minifyImg = require('gulp-imagemin')
 const minifyJS = require('gulp-uglify')
 const concat = require('gulp-concat')
+const minifyHTML = require('gulp-htmlmin')
 const autoprefixer = require('gulp-autoprefixer')
 const del = require('del')
-
+var reload = browserSync.reload
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
@@ -43,8 +44,13 @@ gulp.task('js', () => {
 })
 
 gulp.task('html', () => {
-  gulp
-    .src('src/**/*.html')
+  return gulp
+    .src('./src/*.html')
+    .pipe(
+      minifyHTML({
+        collapseWhitespace: true
+      })
+    )
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.stream())
 })
@@ -59,17 +65,22 @@ gulp.task('img', () => {
     .pipe(gulp.dest('dist/img'))
 })
 
-gulp.task('delete', () =>
-  del(['dist/css', 'dist/js', 'dist/img', 'dist/**/*.html'])
-)
+gulp.task('img', () => {
+  gulp
+    .src('src/img/**/*')
+    .pipe(minifyImg())
+    .pipe(gulp.dest('dist/img'))
+})
 
 gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', gulp.task('css'))
-  gulp.watch('src/js/**/*.js', gulp.task('js'))
-  gulp.watch('src/img/**/*.img', gulp.task('img'))
-  gulp.watch('src/**/*.html', gulp.task('html'))
+  gulp.watch('src/assets/js/**/*.js', gulp.series('js'))
+  gulp.watch('src/images/**/*.jpg', gulp.series('img'))
+  gulp.watch('src/**/*.html', gulp.series('html'))
 })
-
+gulp.task('delete', () =>
+  del(['dist/css', 'dist/js', 'dist/img', 'dist/**/*.html'])
+)
 gulp.task(
   'default',
   gulp.series(
