@@ -24,9 +24,8 @@ body {
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
-    /* identical to box height */
-
     color: #181b2e;
+    /* identical to box height */
   }
   .close-tag {
     position: absolute;
@@ -40,13 +39,46 @@ body {
   }
   .search {
     position: absolute;
-    width: 361px;
-    height: 76px;
     top: 107px;
     left: 45px;
+
+    width: 361px;
+    height: 76px;
 
     background: #f4f6fa;
     border: 1px solid #dee5f0;
     box-sizing: border-box;
+    input {
+      position: absolute;
+      top: 28px;
+      left: 69px;
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      background-color: #f4f6fa;
+      color: #415f8c;
+
+      opacity: 0.6;
+    }
+  }
+  .items-header {
+    position: absolute;
+    left: 45px;
+    top: 218px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+    letter-spacing: 0.105em;
+    text-transform: uppercase;
+
+    color: #000000;
   }
 }
