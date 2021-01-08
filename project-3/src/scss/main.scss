@@ -1,8 +1,52 @@
 // reset
 @import "reset";
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap%22);
+body {
+  background: #efc1e5;
+}
+.card {
+  position: relative;
+  width: 451px;
+  height: 648px;
 
-.aaa {
-  background: lime;
-  height: 100px;
-  width: 1000px;
+  background: #ffffff;
+  box-shadow: 0px 15px 45px -25px rgba(1, 39, 97, 0.19);
+  border-radius: 10px;
+  .header {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    width: 140px;
+    height: 26px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    /* identical to box height */
+
+    color: #181b2e;
+  }
+  .close-tag {
+    position: absolute;
+    top: 36px;
+    right: 45px;
+    width: 44px;
+    height: 44px;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 30px;
+  }
+  .search {
+    position: absolute;
+    width: 361px;
+    height: 76px;
+    top: 107px;
+    left: 45px;
+
+    background: #f4f6fa;
+    border: 1px solid #dee5f0;
+    box-sizing: border-box;
+  }
 }
