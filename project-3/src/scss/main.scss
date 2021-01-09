@@ -2,7 +2,7 @@
 @import "reset";
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 body {
-  background: #efc1e5;
+  background: #ff5733;
 }
 .card {
   position: relative;
@@ -144,6 +144,7 @@ body {
       top: 32px;
       width: 24px;
       height: 24px;
+      border-radius: 50%;
     }
   }
 }
