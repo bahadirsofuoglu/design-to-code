@@ -1,6 +1,6 @@
 // reset
 @import "reset";
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap%22);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 body {
   background: #efc1e5;
 }
@@ -48,6 +48,14 @@ body {
     background: #f4f6fa;
     border: 1px solid #dee5f0;
     box-sizing: border-box;
+    img {
+      position: absolute;
+      top: 22px;
+      left: 25px;
+
+      width: 32px;
+      height: 32px;
+    }
     input {
       position: absolute;
       top: 28px;
@@ -80,5 +88,62 @@ body {
     text-transform: uppercase;
 
     color: #000000;
+  }
+  .item {
+    position: absolute;
+    width: 391px;
+    height: 84px;
+    left: 30px;
+    top: 242px;
+
+    background: #ffffff;
+    border-radius: 10px;
+    .avatar {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      width: 57px;
+      height: 57px;
+
+      border-radius: 50%;
+    }
+    .title {
+      position: absolute;
+      left: 87px;
+      top: 24px;
+      width: 114px;
+      height: 19px;
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      /* identical to box height */
+
+      color: #000000;
+    }
+    .subtitle {
+      position: absolute;
+      left: 87px;
+      top: 48px;
+      width: 53px;
+      height: 16px;
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: #000000;
+    }
+    input {
+      position: absolute;
+      right: 25px;
+      top: 32px;
+      width: 24px;
+      height: 24px;
+    }
   }
 }
