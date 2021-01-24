@@ -50,31 +50,41 @@ body {
       height: 41px;
       right: 7px;
       top: 7px;
+      color: #34426c;
+      background: #ffffff;
+    }
+    .business-item > p {
+      position: absolute;
+
+      right: 27px;
+      top: 7px;
 
       font-family: Mulish;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
       line-height: 28px;
-      /* identical to box height */
-      text-align: center;
-      color: #34426c;
-      background: #ffffff;
     }
   }
   .close-item {
     position: absolute;
     width: 48px;
     height: 48px;
-    right: 30px;
-    top: 30px;
+    right: 45px;
+    top: 60px;
     border-radius: 50%;
+
+    background: #f7f9fc;
+  }
+  .close-item > p {
+    position: absolute;
+    top: 10px;
+    left: 14px;
     font-family: Mulish;
     font-style: normal;
     font-weight: normal;
     font-size: 28px;
     line-height: 28px;
     text-align: center;
-    background: #f7f9fc;
   }
 }
