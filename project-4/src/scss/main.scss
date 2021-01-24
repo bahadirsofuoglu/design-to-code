@@ -1,6 +1,10 @@
 // reset
 @import "reset";
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background: #f7f9fc;
   display: flex;
@@ -9,6 +13,7 @@ body {
 
 .menu-card {
   position: absolute;
+
   left: 10%;
   right: 10%;
   top: 149px;
@@ -86,5 +91,16 @@ body {
     font-size: 28px;
     line-height: 28px;
     text-align: center;
+  }
+
+  .catagories-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left: 92px;
+    right: 92px;
+    top: 234px;
   }
 }
